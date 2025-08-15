@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa;
+}
+  header { 
+      background-color: #003e6b; 
+      color: white;
+      padding: 20px;
+      text-align: center;
+      
+  }
+
+header img {
+height: 50px;
+margin-right: 80rem;
+}
+ 
+
+  footer { background-color: #1c2225;
+       color: white; 
+       text-align: center; 
+       padding: 10px;
+       margin-top: 30px;
+       }
+
+  .module { 
+      margin-top: 30px;
+   }
+
+  .body h2 {
+      padding: 20px;
+      text-align: center;
+    
+  }
+
+
+
+ .body p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
