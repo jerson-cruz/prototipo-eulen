@@ -1,0 +1,264 @@
+:root {
+  --color-header:rgba(15, 110, 199, 0.5);
+  --color-titulos:#178de1;
+  --color-parrafos: #50a9e8;
+  --color-bordes:0 4px 12px  rgb(17, 84, 160);
+  --color-caja:rgb(24, 150, 213);
+  --color-fondo:#F8F9FA;
+  --color-hover:  #012d56;
+  
+}
+
+
+body {
+  background-color:var(--color-fondo);
+  padding-bottom: 7%; 
+}
+
+.body-text h2 {
+color: var(--color-titulos);
+text-align: center;
+padding: 50px;
+}
+.body-text p{
+text-align:justify;
+margin-left: 20%;
+margin-right: 20%;
+padding: 0, 50px, 50px, 50px;
+color: var(--color-parrafos);
+}
+
+/*header*/
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-header);
+  color: var(--color-fondo);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+header img {
+height: 50px;
+margin-right: 80rem;
+}
+
+
+
+/*estilos de  la lista organizada*/
+
+
+
+/* Menú principal */
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 20px 0 0 0;
+  
+}
+
+.menu li {
+  position: relative;
+}
+
+/* Botones */
+.menu a {
+  text-decoration: none;
+  color: var(--color-fondo);
+  padding: 10px 20px;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+ 
+}
+
+.menu a:hover {
+  background-color:var(--color-hover);
+
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:var(--color-hover);
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  width: 150px;
+}
+
+.dropdown-content li {
+  margin-bottom: 8px;
+}
+
+.dropdown-content li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--color-parrafos);
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-titulos);
+  color: var(--color-fondo);
+}
+
+/* Mostrar dropdown al pasar el cursor */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*inicio del footer*/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:var(--color-hover);
+  color: var(--color-fondo);
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.footer-nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color:var(--color-fondo);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 1s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-titulos); 
+}
+
+  .ph {
+    text-align: center;
+    margin: 20px;
+  }
+  .ph h3{
+    font-size: 30px;
+    color:var(--color-titulos);
+    margin: 30px;
+  }
+  .ph p {
+    text-align:justify;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0, 50px, 50px, 50px;
+    color: var(--color-parrafos);
+  }
+  
+
+  /*estilo para seccion uno*/
+.uno {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: 0 auto;
+  
+}
+
+  /*estilo para seccion dos*/
+  .dos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    
+  }
+  
+  
+
+/*estilo para seccion logros*/
+.logros{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: 0 auto;
+  
+}
+
+/*caja de la imagen*/
+.caja-logros{
+  background-color: var(--color-fondo);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow:var(--color-bordes);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  margin: 20px;
+  overflow: hidden;
+  
+}
+
+/*imagenes*/
+.caja-logros img{ 
+display: none;
+width: 300px;
+height: 400px;
+border-radius: 10px;
+object-fit: cover;
+transition: transform 1s ease, opacity 1s ease;
+cursor: pointer;
+
+}
+
+.caja-logros img.active {
+  display: block;
+}
+
+
+.caja-logros img.active:hover {
+  transform: scale(1.2);
+}
+
+
+/*estilo de las flechas*/
+.nav-btn {
+  cursor: pointer;
+  border-radius: 5px;
+ 
+}
+.nav-btn img.active:hover{
+  transform: scale(1.2);
+  
+}
