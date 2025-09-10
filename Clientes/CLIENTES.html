@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conexión APIs Radar</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    .api-section { background: #fff; margin-bottom: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .api-section h2 { font-size: 18px; margin-bottom: 10px; color: #333; }
+    pre { background: #eee; padding: 10px; border-radius: 5px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Datos de las APIs</h1>
+  <div id="contenido"></div>  
+
+  <script>
+    const apis = [
+      {nombre: "Diagnósticos", url: "proxy.php?tipo=diagnosticos"},
+      {nombre: "Ejecuciones", url: "proxy.php?tipo=ejecuciones"},
+      {nombre: "Preguntas", url: "proxy.php?tipo=preguntas"},
+      {nombre: "Entidades", url: "proxy.php?tipo=entidades"},
+      {nombre: "Cumplimiento Diagnóstico", url: "proxy.php?tipo=cumplimiento"},
+      {nombre: "Expedientes", url: "proxy.php?tipo=expedientes"},
+      {nombre: "Campos Personalizados", url: "proxy.php?tipo=campos"}
+    ];
+  
+    async function cargarDatos() {
+      try {
+        const cont = document.getElementById("contenido");
+
+        for (let api of apis) {
+          const res = await fetch(api.url);   
+          const data = await res.json();
+
+          const section = document.createElement("div");
+          section.classList.add("api-section");
+          section.innerHTML = `
+            <h2>${api.nombre}</h2>
+            <pre>${JSON.stringify(data, null, 2)}</pre>
+          `;
+          cont.appendChild(section);
+        }
+      } catch (err) {
+        console.error("Error cargando APIs:", err);
+      }
+    }
+  
+    cargarDatos();
+  </script>
+</body>
+</html>
