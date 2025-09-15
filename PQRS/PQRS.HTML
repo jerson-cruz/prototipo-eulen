@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio de Limpieza</title>
+  <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<li><a href="../inicio/index.html">inicio</a></li>
+<form action="PQRS.HTML" method="POST">
+  <label>Zona objeto del reporte</label>
+  <select name="zona" required>
+    <option value="">Seleccione opción</option>
+    <option value="ANTIOQUIA">ANTIOQUIA</option>
+    <option value="CENTRO">CENTRO</option>
+    <option value="NORTE">NORTE</option>
+    <option value="OCCIDENTE">OCCIDENTE</option>
+  </select><br><br>
+
+  <label>Fecha</label>
+  <input type="date" name="fecha" required><br><br>
+
+  <label>Tipo de reporte</label>
+  <select name="tipo_reporte" required>
+    <option value="">Seleccione opción</option>
+    <option value="FELICITACION">FELICITACIÓN</option>
+    <option value="QUEJA">QUEJA</option>
+    <option value="RECLAMO">RECLAMO</option>
+  </select><br><br>
+
+  <label>Cliente</label>
+  <input type="text" name="cliente" required><br><br>
+
+  <label>Sede</label>
+  <input type="text" name="sede" required><br><br>
+
+  <label>Tipo de servicio</label>
+  <input type="text" name="tipo_servicio" required><br><br>
+
+  <label>Nombre y cargo de la persona que reporta</label>
+  <input type="text" name="nombre_cargo" required><br><br>
+
+  <label>Descripción de la situación</label>
+  <textarea name="descripcion" required></textarea><br><br>
+
+  <label>Correo para notificación</label>
+  <input type="email" name="correo" required><br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+</html>
