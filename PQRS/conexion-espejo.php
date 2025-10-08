@@ -10,15 +10,15 @@ if ($conexion->connect_error) {
 }
 
 // ===== 1. Recibir datos =====
-$zona        = $_POST['id_combo_1_id_entidad_asociada_chosen'] ?? '';
-$fecha       = $_POST['fechalimite'] ?? '';
-$tipoReporte = $_POST['idtt_498_idc_34'] ?? '';
-$cliente     = $_POST['idtt_498_idc_31'] ?? '';
-$sede        = $_POST['idtt_498_idc_30'] ?? '';
-$tipoServicio= $_POST['idtt_498_idc_36'] ?? '';
-$nombreCargo = $_POST['idtt_498_idc_33'] ?? '';
-$descripcion = $_POST['idtt_498_idc_10'] ?? '';
-$correo      = $_POST['idtt_498_idc_23'] ?? '';
+$zona        = $_POST['id_entidad_asociada'] ?? null;
+$fecha       = $_POST['fechaFaseLimite_498'] ?? null;
+$tipoReporte = $_POST['idtt_498_idc_34'] ?? null;
+$cliente     = $_POST['idtt_498_idc_31'] ?? null;
+$sede        = $_POST['idtt_498_idc_30'] ?? null;
+$tipoServicio= $_POST['idtt_498_idc_36'] ?? null;
+$nombreCargo = $_POST['idtt_498_idc_33'] ?? null;
+$descripcion = $_POST['idtt_498_idc_10'] ?? null;
+$correo      = $_POST['idtt_498_idc_23'] ?? null;
 
 // ===== 2. Debug: Verifica lo que llega =====
 if (empty($_POST)) {
